@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fraud Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection Dashboard</h1>
+        <form method="POST">
+            <label>Transaction Type:</label>
+            <select name="type" required>
+                <option value="CASH_OUT">CASH_OUT</option>
+                <option value="TRANSFER">TRANSFER</option>
+                <option value="PAYMENT">PAYMENT</option>
+                <option value="DEBIT">DEBIT</option>
+            </select>
+
+            <label>Amount:</label>
+            <input type="number" name="amount" step="0.01" required>
+
+            <label>Old Balance (Sender):</label>
+            <input type="number" name="old_org" step="0.01" required>
+
+            <label>New Balance (Sender):</label>
+            <input type="number" name="new_org" step="0.01" required>
+
+            <label>Old Balance (Receiver):</label>
+            <input type="number" name="old_dest" step="0.01" required>
+
+            <label>New Balance (Receiver):</label>
+            <input type="number" name="new_dest" step="0.01" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if result %}
+            <div class="result">
+                <h2>{{ result }}</h2>
+                {% if prob is not none %}
+                    <p>Risk Score: {{ prob }}%</p>
+                {% endif %}
+            </div>
+        {% endif %}
+         <div style="text-align:center; margin-top:20px;">
+            <a href="/history">📜 View Transaction History</a>
+        </div>
+
+    </div>
+</body>
+</html>

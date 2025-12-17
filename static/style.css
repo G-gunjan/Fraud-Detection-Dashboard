@@ -1,0 +1,89 @@
+body {
+    background-color: #dbdada; /* white background */
+    color: #000; /* black text */
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white; /* light gray for subtle contrast */
+    border-radius: 15px;
+    padding: 30px;
+    width: 420px;
+    box-shadow: 0 0 25px rgba(80, 84, 84, 0.15);
+    text-align: center;
+}
+
+h1 {
+    color: rgb(26, 185, 248); /* teal-like heading color */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    color: #333; /* darker label text */
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc; /* light border */
+    background-color: #fff; /* white inputs */
+    color: #000; /* black text */
+    outline: none;
+}
+
+button {
+    background-color: rgb(26, 185, 248);  /* teal button */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #009999; /* darker teal on hover */
+    transform: scale(1.05);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f1f1f1; /* light gray box */
+    border-radius: 10px;
+}
+
+.result h2 {
+    color: #ff5757; /* red heading */
+}
+
+.result p {
+    color: #00b3b3; /* teal text */
+}
+
+.history-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #e0e0e0; /* light button */
+    color: #000; /* black text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.history-btn:hover {
+    background: #d0d0d0;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction History</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">📜 Transaction History</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Risk %</th>
+        <th>Prediction</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<center>
+    <a href="/">⬅ Back to Prediction</a>
+</center>
+
+</body>
+</html>

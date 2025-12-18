@@ -1,6 +1,7 @@
 # Fraud Detection Dashboard
+<img src="screenshots/fraud-detection.png" width="500">
 Fraud Detection Dashboard takes input from the user and predicts whether the transaction is Fraud,Legitimate or Suspicious based upon the rule-based logic.The model is trained using Random Forest with ~0.99 Accuracy.Users can submit their transactional data ,instantly view their risk score,track transaction data history and analyse trends through visual dashboard.
-![Dashboard](screenshots/fraud-detection.png)
+
 ## Features
 * Users can enter transaction details and instantly view the predicted fraud category along with a risk score.
 * All transactions and predictions are automatically stored in an Excel file for auditing and analysis

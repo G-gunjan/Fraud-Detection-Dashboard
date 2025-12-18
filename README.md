@@ -1,5 +1,6 @@
 # Fraud Detection Dashboard
 <img src="screenshots/fraud-detection.png" width="500">
+<img src="screenshots/history.png" width="500">
 Fraud Detection Dashboard takes input from the user and predicts whether the transaction is Fraud,Legitimate or Suspicious based upon the rule-based logic.The model is trained using Random Forest with ~0.99 Accuracy.Users can submit their transactional data ,instantly view their risk score,track transaction data history and analyse trends through visual dashboard.
 
 ## Features
@@ -47,6 +48,83 @@ Each transaction is classified based on the final fraud risk percentage generate
 | < 30%           | Legitimate Transaction |
 
 This threshold-based classification helps in prioritizing high-risk transactions for immediate investigation while allowing low-risk transactions to proceed without interruption.
+
+## 🚀 How to Run the Project
+
+Follow the steps below to set up and run the Fraud Detection Dashboard locally.
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/G-gunjan/Fraud-Detection-Dashboard.git
+cd Fraud-Detection-Dashboard
+```
+### 2️⃣ Create a Virtual Environment 
+```bash
+python -m venv venv
+```
+Activate the virtual environment:
+```bash
+venv\Scripts\activate
+```
+### 3️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 4️⃣ Run the Application
+```bash
+python app.py
+```
+Once the server starts, open your browser and navigate to:
+```bash
+http://127.0.0.1:8000
+```
+## 🌐 Application Routes
+
+| Route     | Description |
+|-----------|-------------|
+| `/`       | Fraud prediction dashboard |
+| `/charts` | Risk & prediction analytics |
+| `/history`| Transaction history table |
+
+---
+
+## 📈 Visualizations
+
+- **Bar Chart:** Distribution of prediction categories
+  <img src="screenshots/prediction-distribution.png" width="500">
+- **Histogram:** Risk percentage distribution
+    <img src="screenshots/risk-percentage-distribution.png" width="500">
+
+All charts are automatically generated and saved in the `static/` folder.
+
+---
+
+## 🧪 Data Storage
+
+- All transaction predictions are stored in `history.xlsx`
+- The file is automatically created when the first transaction is predicted
+
+---
+
+## 🛠️ Technologies Used
+
+- Python  
+- Flask  
+- Scikit-learn  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- OpenPyXL  
+- HTML / CSS  
+
+---
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
+
+
+
 
 
 
